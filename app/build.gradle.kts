@@ -42,8 +42,15 @@ android {
 
     // The exercise prep instructions specify an instrumented-test source folder
     // named "Test" (capital T) instead of the Gradle default "androidTest".
-    // Map it here so Android Studio and Gradle both resolve it correctly.
+    // On case-insensitive filesystems (default on macOS/Windows), "src/Test/java"
+    // and Gradle's built-in "src/test/java" (unit tests) are the SAME physical
+    // folder, so the default unit-test source set must be evicted from it first,
+    // otherwise Android Studio claims the folder as [unitTest] instead of
+    // instrumented androidTest.
     sourceSets {
+        getByName("test") {
+            java.setSrcDirs(emptyList<String>())
+        }
         getByName("androidTest") {
             java.setSrcDirs(listOf("src/Test/java"))
         }
