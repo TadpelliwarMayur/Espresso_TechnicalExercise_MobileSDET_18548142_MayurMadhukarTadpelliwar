@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Espresso Technical Exercise</string>
+    <string name="hello_text">Hello, Espresso!</string>
+</resources>
