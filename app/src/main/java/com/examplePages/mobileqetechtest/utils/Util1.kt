@@ -1,4 +1,4 @@
 package com.examplePages.mobileqetechtest.utils
 
-class Util1 {
+object Util1 {
 }
