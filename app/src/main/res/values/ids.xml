@@ -1,0 +1,10 @@
+<resources>
+    <item name="username" type="id"/>
+    <item name="password" type="id"/>
+    <item name="loginButton" type="id"/>
+
+    <item name="otpInput" type="id"/>
+    <item name="verifyButton" type="id"/>
+
+    <item name="home" type="id"/>
+</resources>
